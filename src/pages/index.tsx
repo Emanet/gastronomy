@@ -16,9 +16,9 @@ const HomePage = () => {
 						objectFit="cover"
 					/>
 					<div className="overlay">
-						<h1>Welcome toa Be Fat</h1>
+						<h1>Welcome to Be Fat!</h1>
 						<Link href="/search" className="explore-button">
-							Explore now
+							Explore Now
 						</Link>
 					</div>
 				</div>
