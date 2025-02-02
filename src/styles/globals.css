@@ -53,3 +53,482 @@
     background-color: #f5f5f5;
     border-radius: 4px;
   }
+
+  /* src/styles/globals.css */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: #333;
+  color: white;
+  height: 60px;
+}
+
+.navbar-brand a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-links a, .navbar-auth a {
+  margin-left: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-links a:hover, .navbar-auth a:hover {
+  text-decoration: underline;
+}
+
+/* src/styles/globals.css */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: #333;
+  color: white;
+  height: 60px;
+}
+
+.navbar-brand a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-links a, .navbar-auth a {
+  margin-left: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-links a:hover, .navbar-auth a:hover {
+  text-decoration: underline;
+}
+
+.home-container {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.home-content {
+  margin-top: 20px;
+}
+
+.explore-button {
+  background-color: #0070f3;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.explore-button:hover {
+  background-color: #005bb5;
+}
+.background-image{
+  z-index: -1;
+}
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 1; /* Overlay içeriğini üstte tutma */
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* styles/globals.css */
+.search-page {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.restaurant-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.restaurant-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.restaurant-card:hover {
+  transform: translateY(-5px);
+}
+
+.restaurant-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.restaurant-card h3 {
+  padding: 1rem;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.search-bar {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 500px;
+  padding: 0.8rem 1.5rem;
+  border: 2px solid #ddd;
+  border-radius: 25px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.search-input:focus {
+  border-color: #007bff;
+}
+
+/* styles/RestaurantDetail.css (ya da global CSS dosyanıza ekleyebilirsiniz) */
+
+.restaurant-detail-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #fff;
+}
+
+.back-button {
+  background-color: #f8f9fa;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.back-button:hover {
+  background-color: #e9ecef;
+  transform: translateY(-2px);
+}
+
+.restaurant-header {
+  margin-bottom: 2rem;
+}
+
+.restaurant-title {
+  font-size: 2.5rem;
+  color: #2d3436;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.gallery-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery-image:hover {
+  transform: scale(1.02);
+}
+
+.info-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.contact-info {
+  background-color: #f8f9fa;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.section-title {
+  font-size: 1.5rem;
+  color: #2d3436;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.address-section {
+  margin-bottom: 1.5rem;
+}
+
+.map-link {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.map-link:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.map-container {
+  height: 400px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.not-found {
+  text-align: center;
+  padding: 4rem;
+  font-size: 1.5rem;
+  color: #6c757d;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .restaurant-detail-container {
+      padding: 1rem;
+  }
+
+  .restaurant-title {
+      font-size: 2rem;
+  }
+
+  .image-gallery {
+      grid-template-columns: 1fr;
+  }
+
+  .gallery-image {
+      height: 250px;
+  }
+
+  .info-section {
+      grid-template-columns: 1fr;
+  }
+
+  .map-container {
+      height: 300px;
+  }
+}
+
+/* styles/About.css */
+
+.about-container {
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+.about-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+              url('/image.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.about-title {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.about-subtitle {
+  font-size: 1.5rem;
+  opacity: 0.9;
+}
+
+.about-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.about-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-bottom: 4rem;
+  align-items: center;
+}
+
+.section-image {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #2d3436;
+}
+
+.section-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #636e72;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 4rem 0;
+}
+
+.feature-card {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #2d3436;
+}
+
+.feature-card p {
+  color: #636e72;
+}
+
+.contact-section {
+  text-align: center;
+  margin-top: 4rem;
+  padding: 4rem 2rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+}
+
+.contact-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #2d3436;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contact-icon {
+  font-size: 1.5rem;
+}
+
+.contact-item a {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+.about-footer {
+  text-align: center;
+  padding: 2rem;
+  background: #2d3436;
+  color: white;
+}
+
+.about-footer a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.about-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-title {
+      font-size: 2.5rem;
+  }
+
+  .about-subtitle {
+      font-size: 1.2rem;
+  }
+
+  .about-section {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+  }
+
+  .contact-info {
+      flex-direction: column;
+      gap: 1rem;
+  }
+}

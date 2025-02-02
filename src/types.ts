@@ -42,3 +42,11 @@ export interface Restaurant {
   export interface SearchBarProps {
     onSearch: (searchTerm: string) => void;
   }
+
+  // src/types/types.ts
+
+
+export interface RestaurantListProps {
+  restaurants: Restaurant[];
+  onRestaurantClick: (restaurant: Restaurant) => void;
+}
