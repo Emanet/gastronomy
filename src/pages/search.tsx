@@ -5,7 +5,7 @@ import SearchBar from "../components/SearchBar";
 import RestaurantList from "../components/RestaurantList";
 import { Restaurant } from "../types/types";
 import { fetchRestaurants } from "../utils/api";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/NavBar";
 
 const SearchPage = () => {
 	const [restaurants, setRestaurants] = useState<Restaurant[]>([]);

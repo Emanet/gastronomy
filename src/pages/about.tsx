@@ -1,6 +1,6 @@
 // src/pages/about.tsx
 import React from "react";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/NavBar";
 import Image from "next/image";
 
 const AboutPage = () => {
