@@ -60,20 +60,7 @@ const AboutPage = () => {
 					</div>
 				</div>
 
-				<div className="contact-section">
-					<h2>Get in Touch</h2>
-					<p>Have questions or suggestions? We'd love to hear from you!</p>
-					<div className="contact-info">
-						<div className="contact-item">
-							<span className="contact-icon">📧</span>
-							<a href="mailto:contact@befat.com">contact@befat.com</a>
-						</div>
-						<div className="contact-item">
-							<span className="contact-icon">📱</span>
-							<a href="tel:+1234567890">+123 456 7890</a>
-						</div>
-					</div>
-				</div>
+
 			</div>
 
 			<footer className="about-footer">
