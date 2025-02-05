@@ -9,7 +9,7 @@ const AboutPage = () => {
 			<Navbar />
 
 			<div className="about-hero">
-				<h1 className="about-title">Welcome to Be Fat</h1>
+				<h1 className="about-title">Welcome to Be Hungry</h1>
 				<p className="about-subtitle">
 					Discover the Best Restaurants Around You
 				</p>
@@ -29,7 +29,7 @@ const AboutPage = () => {
 					<div className="section-text">
 						<h2>Our Story</h2>
 						<p>
-							Founded in 2024, Be Fat has become the go-to platform for food
+							Founded in 2024, Be Hungry has become the go-to platform for food
 							enthusiasts looking to discover exceptional dining experiences.
 							Our mission is to connect people with the best restaurants, making
 							every dining experience memorable.
@@ -65,7 +65,7 @@ const AboutPage = () => {
 
 			<footer className="about-footer">
 				<p>
-					&copy; 2024 Be Fat. Created by{" "}
+					&copy; 2024 Be Hungry. Created by{" "}
 					<a
 						href="https://github.com/Emanet"
 						target="_blank"

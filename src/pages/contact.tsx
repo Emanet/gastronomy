@@ -38,7 +38,7 @@ const ContactPage = () => {
 
 			<footer className="about-footer" >
 				<p>
-					&copy; 2024 Be Fat. Created by{" "}
+					&copy; 2024 Be Hungry. Created by{" "}
 					<a
 						href="https://github.com/Emanet"
 						target="_blank"
