@@ -94,6 +94,7 @@ const ChargingStationMap = () => {
 									<p>Outlet Information:</p>
 									<ul>
 										{station.smetadata.outlets.map((outlet, index) => (
+											// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
 											<li key={index}>
 												Type: {outlet.outletTypeCode}
 												<br />

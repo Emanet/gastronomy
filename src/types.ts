@@ -52,7 +52,7 @@ export interface RestaurantListProps {
 }
 
 // src/types/types.ts içine ekleyin
-export interface ChargingStation {
+/* export interface ChargingStation {
   pcode: string;
   pname: string;
   pcoordinate: {
@@ -71,4 +71,37 @@ export interface ChargingStation {
           outletTypeCode: string;
       }>;
   };
-}
+} */
+
+  export interface ChargingStation {
+    sactive: boolean;
+    savailable: boolean;
+    scode: string;
+    scoordinate: {
+      x: number; // longitude
+      y: number; // latitude
+      srid: number;
+    };
+    smetadata: {
+      city?: string;
+      state?: string;
+      address?: string;
+      capacity?: number;
+      provider?: string;
+      accessType?: string;
+      accessInfo?: string;
+      paymentInfo?: string;
+      party_id?: string;
+      opening_times?: {
+        twentyfourseven?: boolean;
+      };
+    };
+    sname: string;
+    sorigin: string;
+    stype: string;
+  }
+  
+  export interface Restaurant {
+    Id: string;
+    // Add other restaurant properties as needed
+  }

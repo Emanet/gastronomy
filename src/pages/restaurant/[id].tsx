@@ -1,11 +1,12 @@
 // src/pages/restaurant/[id].tsx
-import { FC } from "react";
-import { GetServerSideProps } from "next";
+import type { FC } from "react";
+import type { GetServerSideProps } from "next";
 import { fetchRestaurantById } from "../../utils/api";
-import { Restaurant } from "../../types/types";
+import type { Restaurant } from "../../types";
 import { useRouter } from "next/router";
 import dynamic from "next/dynamic";
 
+// biome-ignore lint/suspicious/noShadowRestrictedNames: <explanation>
 const Map = dynamic(() => import("../../components/Map"), { ssr: false });
 
 interface RestaurantDetailProps {
@@ -23,7 +24,11 @@ const RestaurantDetail: FC<RestaurantDetailProps> = ({ restaurant }) => {
 
 	return (
 		<div className="restaurant-detail-container">
-			<button className="back-button" onClick={() => router.back()}>
+			<button
+				type="button"
+				className="back-button"
+				onClick={() => router.back()}
+			>
 				← Back to list
 			</button>
 
@@ -34,6 +39,7 @@ const RestaurantDetail: FC<RestaurantDetailProps> = ({ restaurant }) => {
 			<div className="image-gallery">
 				{restaurant.ImageGallery?.map((image, index) => (
 					<img
+						// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
 						key={index}
 						src={image.ImageUrl}
 						alt={restaurant.Detail.en.Title}
@@ -71,6 +77,7 @@ const RestaurantDetail: FC<RestaurantDetailProps> = ({ restaurant }) => {
 };
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
+	// biome-ignore lint/style/noNonNullAssertion: <explanation>
 	const { id } = context.params!;
 	const restaurant = await fetchRestaurantById(id);
 
