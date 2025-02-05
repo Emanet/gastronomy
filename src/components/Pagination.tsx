@@ -1,5 +1,4 @@
-import type React from "react";
-import "../styles/globals.css";
+import React from "react";
 
 interface PaginationProps {
 	currentPage: number;
@@ -12,61 +11,70 @@ const Pagination: React.FC<PaginationProps> = ({
 	totalPages,
 	onPageChange,
 }) => {
+	const pageNumbers = [];
+	const maxVisiblePages = 5;
+
+	let startPage = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
+	const endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
+
+	if (endPage - startPage + 1 < maxVisiblePages) {
+		startPage = Math.max(1, endPage - maxVisiblePages + 1);
+	}
+
+	for (let i = startPage; i <= endPage; i++) {
+		pageNumbers.push(i);
+	}
+
 	return (
 		<div className="pagination">
+			{/* biome-ignore lint/a11y/useButtonType: <explanation> */}
+			<button
+				onClick={() => onPageChange(1)}
+				disabled={currentPage === 1}
+				className="pagination-button"
+			>
+				&laquo;
+			</button>
+
 			{/* biome-ignore lint/a11y/useButtonType: <explanation> */}
 			<button
 				onClick={() => onPageChange(currentPage - 1)}
 				disabled={currentPage === 1}
 				className="pagination-button"
 			>
-				Previous
+				&lsaquo;
 			</button>
 
-			<span className="pagination-info">
-				Page {currentPage} of {totalPages}
-			</span>
+			{pageNumbers.map((number) => (
+				// biome-ignore lint/a11y/useButtonType: <explanation>
+				<button
+					key={number}
+					onClick={() => onPageChange(number)}
+					className={`pagination-button ${
+						currentPage === number ? "active" : ""
+					}`}
+				>
+					{number}
+				</button>
+			))}
 
+			{/* biome-ignore lint/a11y/useButtonType: <explanation> */}
 			<button
 				onClick={() => onPageChange(currentPage + 1)}
 				disabled={currentPage === totalPages}
 				className="pagination-button"
 			>
-				Next
+				&rsaquo;
 			</button>
 
-			<style jsx>{`
-        .pagination {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          gap: 1rem;
-          margin: 2rem 0;
-        }
-
-        .pagination-button {
-          padding: 0.5rem 1rem;
-          border: 1px solid #ddd;
-          border-radius: 4px;
-          background: white;
-          cursor: pointer;
-          font-size: 1rem;
-        }
-
-        .pagination-button:disabled {
-          background: #f5f5f5;
-          cursor: not-allowed;
-          opacity: 0.7;
-        }
-
-        .pagination-button:not(:disabled):hover {
-          background: #f5f5f5;
-        }
-
-        .pagination-info {
-          font-size: 1rem;
-        }
-      `}</style>
+			{/* biome-ignore lint/a11y/useButtonType: <explanation> */}
+			<button
+				onClick={() => onPageChange(totalPages)}
+				disabled={currentPage === totalPages}
+				className="pagination-button"
+			>
+				&raquo;
+			</button>
 		</div>
 	);
 };
