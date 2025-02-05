@@ -26,7 +26,7 @@ const ContactPage = () => {
 				<div className="contact-info">
 					<div className="contact-item">
 						<span className="contact-icon">📧</span>
-						<a href="mailto:contact@befat.com">contact@befat.com</a>
+						<a href="mailto:contact@behungry.com">contact@befat.com</a>
 					</div>
 					<div className="contact-item">
 						<span className="contact-icon">📱</span>
