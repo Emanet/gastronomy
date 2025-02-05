@@ -50,3 +50,25 @@ export interface RestaurantListProps {
   restaurants: Restaurant[];
   onRestaurantClick: (restaurant: Restaurant) => void;
 }
+
+// src/types/types.ts içine ekleyin
+export interface ChargingStation {
+  pcode: string;
+  pname: string;
+  pcoordinate: {
+      x: number;
+      y: number;
+      srid: number;
+  };
+  pmetadata: {
+      city: string;
+      address: string;
+      capacity: number;
+  };
+  smetadata: {
+      outlets: Array<{
+          maxPower: number;
+          outletTypeCode: string;
+      }>;
+  };
+}
