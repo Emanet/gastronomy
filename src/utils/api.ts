@@ -13,6 +13,9 @@ export const fetchRestaurants = async (page = 1, pageSize = 25): Promise<Restaur
       language: 'en',
       tagfilter: 'gastronomy',
       source: 'lts'
+    },
+    headers: {
+      'Referer': 'testingunibz'
     }
   });
   return response.data.Items;
@@ -33,6 +36,9 @@ export const fetchNearbyChargingStations = async (): Promise<ChargingStation[]> 
               offset: 0,
               shownull: false,
               distinct: true
+          },
+          headers: {
+            'Referer': 'testingunibz'
           }
       }
   );
