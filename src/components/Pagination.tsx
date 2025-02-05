@@ -1,4 +1,5 @@
 import type React from "react";
+import "../styles/globals.css";
 
 interface PaginationProps {
 	currentPage: number;
@@ -12,10 +13,7 @@ const Pagination: React.FC<PaginationProps> = ({
 	onPageChange,
 }) => {
 	return (
-		<div
-			style={{ marginBottom: "0", paddingBottom: "1em" }}
-			className="pagination"
-		>
+		<div className="pagination">
 			{/* biome-ignore lint/a11y/useButtonType: <explanation> */}
 			<button
 				onClick={() => onPageChange(currentPage - 1)}
