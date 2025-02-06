@@ -14,6 +14,8 @@ describe('RestaurantRepository', () => {
   beforeEach(() => {
     (ApiService.getInstance as jest.Mock).mockReturnValue(mockApiService);
     repository = RestaurantRepository.getInstance();
+    // Clear the cache before each test
+    repository['cache'].clear();
   });
 
   afterEach(() => {
