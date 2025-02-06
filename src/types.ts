@@ -100,6 +100,57 @@ export interface RestaurantListProps {
     sorigin: string;
     stype: string;
   }
+
+  export interface ParkingStation {
+    sactive: boolean;
+    savailable: boolean;
+    scode: string;
+    scoordinate: {
+      x: number; // longitude
+      y: number; // latitude
+      srid: number;
+    };
+    smetadata: {
+      capacity?: number;
+      municipality?: string;
+      free_limit?: number;
+      occupancy_limit?: number;
+      FacilityDescription?: string;
+      capacity_short_stay?: number;
+      capacity_subscribers?: number;
+      free_limit_short_stay?: number;
+      free_limit_subscribers?: number;
+      occupancy_limit_short_stay?: number;
+      occupancy_limit_subscribers?: number;
+    };
+    sname: string;
+    sorigin: string;
+    stype: string;
+  
+    pactive: boolean;
+    pavailable: boolean;
+    pcode: string;
+    pcoordinate: {
+      x: number;
+      y: number;
+      srid: number;
+    };
+    pmetadata: {
+      City?: string;
+      Address?: string;
+      ZIPCode?: string;
+      capacity?: number;
+      IdCompany?: number;
+      Telephone1?: string;
+      Telephone2?: string;
+      municipality?: string;
+      capacity_short_stay?: number;
+      capacity_subscribers?: number;
+    };
+    pname: string;
+    porigin: string;
+    ptype: string;
+  }
   
   export interface Restaurant {
     Id: string;

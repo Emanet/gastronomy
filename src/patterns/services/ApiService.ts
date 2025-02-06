@@ -1,5 +1,5 @@
 import axios from 'axios';
-import type { Restaurant, ChargingStation } from '../../types';
+import type { Restaurant, ChargingStation, ParkingStation } from '../../types';
 
 
 interface ApiResponse {
@@ -66,4 +66,27 @@ export class ApiService {
         );
         return response.data.data;
     }
+
+    async fetchNearbyParkingStations(
+        latitude: number,
+        longitude: number,
+        radius = 10000
+    ): Promise<ParkingStation[]> {
+        const response = await axios.get(
+          `${this.MOBILITY_API_URL}/flat,node/ParkingStation`,
+          {
+            params: {
+              where: `scoordinate.dlt.(${radius},${longitude},${latitude})`,
+              limit: 200,
+              offset: 0,
+              shownull: false,
+              distinct: true
+            },
+            headers: {
+              'Referer': 'testingunibz'
+            }
+          }
+        );
+        return response.data.data;
+      };
 }
