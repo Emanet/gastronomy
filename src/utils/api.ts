@@ -1,5 +1,5 @@
 import axios from 'axios';
-import type { Restaurant, ChargingStation } from '../types';
+import type { Restaurant, ChargingStation, ParkingStation } from '../types';
 
 const TOURISM_API_URL = 'https://tourism.api.opendatahub.com/v1/ODHActivityPoi';
 const MOBILITY_API_URL = 'https://mobility.api.opendatahub.com/v2';
@@ -32,6 +32,29 @@ export const fetchNearbyChargingStations = async (
 ): Promise<ChargingStation[]> => {
   const response = await axios.get(
     `${MOBILITY_API_URL}/flat,node/EChargingStation`,
+    {
+      params: {
+        where: `scoordinate.dlt.(${radius},${longitude},${latitude})`,
+        limit: 200,
+        offset: 0,
+        shownull: false,
+        distinct: true
+      },
+      headers: {
+        'Referer': 'testingunibz'
+      }
+    }
+  );
+  return response.data.data;
+};
+
+export const fetchNearbyParkingStations = async (
+  latitude: number,
+  longitude: number,
+  radius = 10000
+): Promise<ParkingStation[]> => {
+  const response = await axios.get(
+    `${MOBILITY_API_URL}/flat,node/ParkingStation`,
     {
       params: {
         where: `scoordinate.dlt.(${radius},${longitude},${latitude})`,
